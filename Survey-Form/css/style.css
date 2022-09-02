@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary: rgba(22,22,217,0.5);
+  --secondary: rgba(0,181,255,0.6);
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+}
+/*, url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);*/
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(114deg, var(--primary) 36%, var(--secondary) 100%),
+              url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg") no-repeat center center / cover;
+              z-index: -1;
+}
+
+header {
+ text-align: center;
+ margin-top: 100px;
+ color: white;
+}
+header h1 {
+  font-size: 44px;
+}
+
+header p {
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+#survey-form {
+  color: white;
+  background-color: var(--color-darkblue-alpha);
+  width: 46%;
+  margin: 0 26% 0 26%;
+}
+
+form {
+  padding: 40px;
+}
+
+.form_group {
+  padding: 15px;
+  margin: 0 auto 1.26rem auto;
+}
+
+label {
+  font-size: 25px;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.4rem;
+
+}
+
+.form_control::before {
+  content: "";
+  box-sizing: border-box;
+}
+
+.form_control {
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 23px;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+    margin-top: 5px;
+}
+
+select.form_control {
+  height: 50px;
+  padding: 10px;
+  margin: 0;
+}
+
+.form_group p {
+  font-size: 25px;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.4rem;
+  margin-bottom: 20px;
+}
+
+input[type=radio] {
+  transform: scale(1.8);
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+}
+
+.for_radio {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.small {
+  font-size: 18px;
+}
+
+input[type=checkbox] {
+  transform: scale(2);
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-top: 3px;
+}
+
+.check_control {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form_group textarea {
+  width: 100%;
+  height: 150px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+input[type=submit] {
+  width: 100%;
+  height: 60px;
+  background-color: #37af65;
+  font-size: 25px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
+}
